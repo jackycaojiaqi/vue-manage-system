@@ -7,68 +7,79 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/dashboard'
+            redirect: '/client'
         },
         {
             path: '/',
             component: resolve => require(['../components/common/Home.vue'], resolve),
-            meta: { title: '自述文件' },
-            children:[
+            meta: {title: '自述文件'},
+            children: [
                 {
                     path: '/dashboard',
                     component: resolve => require(['../components/page/Dashboard.vue'], resolve),
-                    meta: { title: '系统首页' }
+                    meta: {title: '系统首页'}
                 },
                 {
                     path: '/table',
                     component: resolve => require(['../components/page/BaseTable.vue'], resolve),
-                    meta: { title: '基础表格' }
+                    meta: {title: '基础表格'}
                 },
                 {
                     path: '/tabs',
                     component: resolve => require(['../components/page/Tabs.vue'], resolve),
-                    meta: { title: 'tab选项卡' }
+                    meta: {title: 'tab选项卡'}
                 },
                 {
                     path: '/form',
                     component: resolve => require(['../components/page/BaseForm.vue'], resolve),
-                    meta: { title: '基本表单' }
+                    meta: {title: '基本表单'}
                 },
                 {
                     // 富文本编辑器组件
                     path: '/editor',
                     component: resolve => require(['../components/page/VueEditor.vue'], resolve),
-                    meta: { title: '富文本编辑器' }
+                    meta: {title: '富文本编辑器'}
                 },
                 {
                     // markdown组件
                     path: '/markdown',
                     component: resolve => require(['../components/page/Markdown.vue'], resolve),
-                    meta: { title: 'markdown编辑器' }    
+                    meta: {title: 'markdown编辑器'}
                 },
                 {
                     // 图片上传组件
                     path: '/upload',
                     component: resolve => require(['../components/page/Upload.vue'], resolve),
-                    meta: { title: '文件上传' }   
+                    meta: {title: '文件上传'}
                 },
                 {
                     // vue-schart组件
                     path: '/charts',
                     component: resolve => require(['../components/page/BaseCharts.vue'], resolve),
-                    meta: { title: 'schart图表' }
+                    meta: {title: 'schart图表'}
                 },
                 {
                     // 拖拽列表组件
                     path: '/drag',
                     component: resolve => require(['../components/page/DragList.vue'], resolve),
-                    meta: { title: '拖拽列表' }
+                    meta: {title: '拖拽列表'}
                 },
                 {
                     // 权限页面
                     path: '/permission',
                     component: resolve => require(['../components/page/Permission.vue'], resolve),
-                    meta: { title: '权限测试', permission: true }
+                    meta: {title: '权限测试'}
+                },
+                {
+                    // 权限页面
+                    path: '/client',
+                    component: resolve => require(['../components/page/client/client.vue'], resolve),
+                    meta: {title: '客户信息'}
+                }, {
+                    // 权限页面
+                    path: '/order',
+                    component: resolve => require(['../components/page/order/order.vue'], resolve),
+                    meta: {title: '订单信息'}
                 }
             ]
         },
