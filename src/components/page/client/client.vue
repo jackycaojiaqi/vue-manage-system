@@ -296,7 +296,6 @@ export default {
       }
       var url = this.API.BaseUrl + "/client/update";
       var _this = this;
-
       var qs = require("qs");
       var data = qs.stringify({
         id: this.form.id,

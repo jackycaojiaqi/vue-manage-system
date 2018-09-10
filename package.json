@@ -12,8 +12,10 @@
   "dependencies": {
     "axios": "^0.15.3",
     "babel-polyfill": "^6.23.0",
+    "echarts": "^4.1.0",
     "element-ui": "2.3.3",
     "mavon-editor": "^2.5.4",
+    "v-charts": "^1.17.9",
     "vue": "^2.5.16",
     "vue-cropperjs": "^2.2.0",
     "vue-quill-editor": "3.0.6",
